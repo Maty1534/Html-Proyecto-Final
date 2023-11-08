@@ -1,5 +1,4 @@
 * {
-    background-color: #253342 ;
     color: #5e9188;
     margin: 0;
     padding: 0;
@@ -18,8 +17,8 @@ body{
 }
 
 /* Barra de navegación */
-nav {
-    display: block;
+.navbar {
+    background: #253342;
 }
 
 .contenedor1 {
@@ -86,7 +85,7 @@ header ul{
     border: #232226 solid 0.25vw;
     background-color: #232226;
     border-radius: 10px;
-    width: 112px;
+    width: 111px;
     margin: 0vh 1vw 1vh 1vw;
     height: 50px;
 }
