@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -8,6 +9,7 @@
     --color_secondary: #FFFFFF;
     --color_background: #253342;
     --color_important: #FFD700;
+    --tamaño-N_empresa: 50px;
 }
 
 /* Botón Hamburguesa */
@@ -58,13 +60,13 @@ header {
 
 .ico-svg{
     position: relative;
-    bottom: -1vh;
-    height: 50px;
-    width: 50px;
+    bottom: -0.5vh;
+    height: var(--tamaño-N_empresa);
+    width: var(--tamaño-N_empresa);
 }
 
 .nombre__empresa {
-    font-size: 27px;
+    font-size: calc(var(--tamaño-N_empresa)/2);
     margin-left: 2vw;
     width: 50vw;
 }
@@ -92,23 +94,35 @@ header {
 }
 
 /* Estilos generales para mobiles */
+body {
+    font-size: 14px;
+}
 
 /* Media query para tablets */
 @media (min-width: 768px) {
-    .bars__menu {
-        display: none;
-    }
-
-    .navbar {
+    header {
         display: flex;
     }
 
-    .navbar li {
-        margin-right: 20px;
+    .nombre__empresa {
+        font-size: calc(var(--tamaño-N_empresa));
     }
 
-    .navbar ul {
+    .bars__menu {
+       display: none;
+    }
+
+    .nav__links {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        position: static;
+        clip-path: none;
         flex-direction: row;
-        align-items: center;
+    }
+
+    .nav__link {
+        margin-left: 2vw;
+        padding: 3%;
     }
 }
