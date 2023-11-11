@@ -1,14 +1,13 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 :root {
-    --color_primary: green;
-    --color_secondary: blue;
-    --color_background: white;
-    --color_important: gold;
+    --color_primary: #5e9188;
+    --color_secondary: #FFFFFF;
+    --color_background: #253342;
+    --color_important: #FFD700;
 }
 
 /* Botón Hamburguesa */
@@ -35,20 +34,38 @@
 
 .activeline2__bars-menu {
     opacity: 0;
-    margin-left: -30px;
+    margin-left: 30px;
 }
 
 .activeline3__bars-menu {
     transform: rotate(-45deg) translate(-4px, 2px);
 }
 
-/* Estilos generales para dispositivos pequeños */
+/* Header principal */
 header {
-    background-color: #333;
-    padding: 15px;
+    background-color: var(--color_background);
+    padding: 5px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.empresa__container {
+    display: flex;
+    color: var(--color_primary);
+}
+
+.ico-svg{
+    position: relative;
+    bottom: -1vh;
+    height: 50px;
+    width: 50px;
+}
+
+.nombre__empresa {
+    font-size: 27px;
+    margin-left: 2vw;
+    width: 50vw;
 }
 
 .navbar {
@@ -73,6 +90,8 @@ header {
     text-decoration: none;
     color: var(--color_primary);
 }
+
+/* Estilos generales para mobiles */
 
 /* Media query para tablets */
 @media (min-width: 768px) {
