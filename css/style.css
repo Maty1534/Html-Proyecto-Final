@@ -15,7 +15,7 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
-    order: 3;
+    order: 1;
 }
 
 .bars__menu span {
@@ -53,6 +53,7 @@ header {
 .empresa__container {
     display: flex;
     color: var(--color_primary);
+    order: 0;
 }
 
 .ico-svg{
@@ -68,27 +69,26 @@ header {
     width: 50vw;
 }
 
-.navbar {
-    display: none;
-    order: 2;
+.nav__links {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 67px;
+    right: 0;
+    background-color: var(--color_background);
+    display: grid;
+    place-items: center;
+    clip-path: circle(0% at top right);
+    transition: clip-path .4s;
 }
 
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.navbar li {
-    margin: 10px 0;
-}
-
-.navbar a {
+.nav__link {
     text-decoration: none;
-    color: var(--color_primary);
+    color: var(--color_secondary);
+}
+
+.nav__links--open {
+    clip-path: circle(150% at top right);
 }
 
 /* Estilos generales para mobiles */
