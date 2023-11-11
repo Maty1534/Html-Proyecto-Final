@@ -6,22 +6,24 @@
 
 :root {
     --color_primary: green;
+    --color_secondary: blue;
+    --color_background: white;
+    --color_important: gold;
 }
-
-/* Mobile first */
 
 /* Botón Hamburguesa */
 .bars__menu {
     width: 30px;
     height: 30px;
     cursor: pointer;
+    order: 3;
 }
 
 .bars__menu span {
     display: block;
     width: 100%;
     height: 2px;
-    background: blue;
+    background: white;
     margin-top: 6px;
     transform-origin: 0px 100%;
     transition: all 300ms;
@@ -38,4 +40,56 @@
 
 .activeline3__bars-menu {
     transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+/* Estilos generales para dispositivos pequeños */
+header {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: none;
+    order: 2;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 10px 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--color_primary);
+}
+
+/* Media query para tablets */
+@media (min-width: 768px) {
+    .bars__menu {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+    .navbar li {
+        margin-right: 20px;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        align-items: center;
+    }
 }
