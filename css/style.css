@@ -12,7 +12,7 @@
     --color_important: #FFD700;
     --tamaño_nombre_empresa: 50px;
     --tamaño_links_header: 25px;
-    --shadow-color: 286deg 36% 47%;
+    --shadow-color: 210deg 36% 47%;
     --shadow-elevation-medium:
     0.3px 0.5px 0.9px hsl(var(--shadow-color) / 0),
     1.5px 2.9px 4.9px hsl(var(--shadow-color) / 0.27),
@@ -118,6 +118,7 @@ body {
 }
 
 .main {
+    color: var(--color_secondary);
     display: flex;
     justify-content: center;
     flex: 1;
@@ -151,20 +152,64 @@ body {
 }
 
 .titulo {
-    margin-top: 2%;
+    margin: 2% 0;
     order: 0; /* Coloca el elemento .titulo en la parte superior */
-    flex: 0 0 100%; /* Evita que se estire horizontalmente y ocupe todo el ancho disponible */
+    flex: 0 0 90%; 
     padding: 1% 5%;
     text-align: center;
     box-shadow: var(--shadow-elevation-medium);
     background-color: var(--color_background);
 }
 
+/* Artículos en cards */
+.card {
+    margin: 5% 2.5%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-elevation-medium);
+    /* Otros estilos como tamaño, margen, etc. */
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+    /* Otros estilos para la imagen */
+}
+
+.card__content {
+    padding: 16px;
+    /* Otros estilos para el contenido */
+}
+
+.card__title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    /* Otros estilos para el título */
+}
+
+.card__description {
+    font-size: 1rem;
+    color: #555;
+    /* Otros estilos para la descripción */
+}
+
+.card__button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #5e9188;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    /* Otros estilos para el botón */
+}
+
 /* Media query para tablets */
 @media (min-width: 768px) {
+
+    /* Configuración del header */
     header {
         display: flex;
-        background: linear-gradient(to bottom, var(--color_background), var(--color_background), var(--color_background), var(--color_background), transparent);
     }
 
     .nav__links {
@@ -174,11 +219,6 @@ body {
     .empresa__container {
         justify-content: flex-start;
         margin-right: 7vw;
-    }
-
-    .nombre__empresa {
-        position: relative;
-        top: -9px
     }
 
     .bars__menu {
@@ -208,10 +248,6 @@ body {
     @keyframes salto {
         0%, 100% {top:0;}
         30% {top: calc(-0.25 * var(--tamaño_nombre_empresa));} 
-    }
-
-    .main {
-        background: none;
     }
 }
 
