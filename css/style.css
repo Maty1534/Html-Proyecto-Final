@@ -124,19 +124,6 @@ body {
   background-color: var(--color_secondary);
 }
 
-.img_inicio {
-  width: 45%;
-  margin: 1% 2%;
-}
-
-#Inicio {
-  justify-content: center;
-  text-align: center;
-}
-
-.img_inicio,
-#Inicio,
-.gif_inicio,
 .gif1,
 .img_1 {
   border-radius: 5%;
@@ -190,6 +177,12 @@ p {
   font-size: 17px;
 }
 
+#Inicio {
+  justify-self: center;
+  text-align: center;
+  align-items: center;
+}
+
 /* Artículos en cards */
 .card {
   display: flex;
@@ -199,9 +192,9 @@ p {
   margin: 5% 2.5%;
   border: 1px solid #ccc;
   border-radius: 8px;
-  overflow: hidden;
   box-shadow: var(--shadow-elevation-medium);
   width: 20%;
+  height: 400px;
 }
 
 .card__image {
@@ -302,6 +295,46 @@ p {
   aside,
   #Inicio {
     flex: 1;
+  }
+
+  #Inicio {
+    border-radius: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #Titulo_inicio {
+    justify-content: center;
+    order: 0;
+    text-align: center;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    margin: 1% 0 1.5% 0;
+  }
+
+  #img_inicio1 {
+    order: 0;
+    display: flex;
+    margin-right: 2.5%;
+  }
+
+  #Texto_inicio1 {
+    text-align: center;
+    order: 0;
+    width: 50%;
+  }
+
+  #Texto_inicio2 {
+    text-align: center;
+    order: 1;
+    width: 50%;
+  }
+
+  #gif1_inicio {
+    display: flex;
+    order: 1;
   }
 }
 
