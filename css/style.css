@@ -319,6 +319,12 @@ p {
     order: 0;
     width: 50%;
   }
+
+  #Texto_inicio2 {
+    text-align: center;
+    order: 1;
+    width: 50%;
+  }
 }
 
 /* Escritorios normales */
