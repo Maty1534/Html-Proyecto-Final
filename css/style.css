@@ -186,9 +186,9 @@ p {
   margin: 5% 2.5%;
   border: 1px solid #ccc;
   border-radius: 8px;
-  overflow: hidden;
   box-shadow: var(--shadow-elevation-medium);
   width: 20%;
+  height: 400px;
 }
 
 .card__image {
