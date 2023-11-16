@@ -124,19 +124,6 @@ body {
   background-color: var(--color_secondary);
 }
 
-.img_inicio {
-  width: 45%;
-  margin: 1% 2%;
-}
-
-#Inicio {
-  justify-content: center;
-  text-align: center;
-}
-
-.img_inicio,
-#Inicio,
-.gif_inicio,
 .gif1,
 .img_1 {
   border-radius: 5%;
@@ -302,6 +289,35 @@ p {
   aside,
   #Inicio {
     flex: 1;
+  }
+
+  #Inicio {
+    border-radius: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #Titulo_inicio {
+    justify-content: center;
+    order: 0;
+    text-align: center;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    margin: 1% 0 1.5% 0;
+  }
+
+  #img_inicio1 {
+    order: 0;
+    display: flex;
+    margin-right: 2.5%;
+  }
+
+  #Texto_inicio1 {
+    text-align: center;
+    order: 0;
+    width: 50%;
   }
 }
 
