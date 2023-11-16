@@ -7,10 +7,19 @@
 :root {
     --color_primary: #5e9188;
     --color_secondary: #FFFFFF;
+    --color_tertiary : #00E676;
     --color_background: #253342;
     --color_important: #FFD700;
-    --tamaño-N_empresa: 50px;
+    --tamaño_nombre_empresa: 50px;
+    --tamaño_links_header: 25px;
+    --shadow-color: 286deg 36% 47%;
+    --shadow-elevation-medium:
+    0.3px 0.5px 0.9px hsl(var(--shadow-color) / 0),
+    1.5px 2.9px 4.9px hsl(var(--shadow-color) / 0.27),
+    3px 6.1px 10.2px hsl(var(--shadow-color) / 0.55),
+    6.3px 12.5px 21px hsl(var(--shadow-color) / 0.82);
 }
+
 
 /* Botón Hamburguesa */
 .bars__menu {
@@ -36,7 +45,7 @@
 
 .activeline2__bars-menu {
     opacity: 0;
-    margin-left: 30px;
+    margin-left: -30px;
 }
 
 .activeline3__bars-menu {
@@ -45,13 +54,15 @@
 
 /* Header principal */
 header {
+    width: 100%;
     background-color: var(--color_background);
-    padding: 5px 15px;
+    padding: 5px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Nombre de la empresa */
 .empresa__container {
     display: flex;
     color: var(--color_primary);
@@ -61,51 +72,113 @@ header {
 .ico-svg{
     position: relative;
     bottom: -0.5vh;
-    height: var(--tamaño-N_empresa);
-    width: var(--tamaño-N_empresa);
+    height: var(--tamaño_nombre_empresa);
+    width: var(--tamaño_nombre_empresa);
 }
 
 .nombre__empresa {
-    font-size: calc(var(--tamaño-N_empresa)/2);
+    font-size: calc(var(--tamaño_nombre_empresa)/2);
     margin-left: 2vw;
-    width: 50vw;
+    width: 10vw;
 }
 
+/* Links de la barra de navegación */
 .nav__links {
+    width: 100%;
     position: fixed;
     left: 0;
     bottom: 0;
-    top: 67px;
+    top: 65px;
     right: 0;
-    background-color: var(--color_background);
     display: grid;
     place-items: center;
     clip-path: circle(0% at top right);
     transition: clip-path .4s;
+    background-color: var(--color_background);
 }
 
 .nav__link {
     text-decoration: none;
     color: var(--color_secondary);
+    font-size: var(--tamaño_links_header);
 }
 
 .nav__links--open {
     clip-path: circle(150% at top right);
 }
 
+.nav__link:hover {
+    color: var(--color_tertiary);
+}
+
 /* Estilos generales para mobiles */
 body {
     font-size: 14px;
+    background: white;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    flex-wrap: wrap;
+    background-color: var(--color_secondary);
+}
+
+.img_inicio{
+    width: 45%;
+    margin: 1% 2%;
+}
+
+#Inicio {
+    justify-content: center;
+    text-align: center;  
+}
+
+.gif_inicio{
+    padding-top: 1%;
+    width: 35%;
+}
+
+.gif1 {
+    padding-top: 1%;
+    width: 80%;
+}
+
+.img_1 {
+    text-align: center;    
+    margin: 5% 5% 0% 5%;
+}
+
+.titulo {
+    margin-top: 2%;
+    order: 0; /* Coloca el elemento .titulo en la parte superior */
+    flex: 0 0 100%; /* Evita que se estire horizontalmente y ocupe todo el ancho disponible */
+    padding: 1% 5%;
+    text-align: center;
+    box-shadow: var(--shadow-elevation-medium);
+    background-color: var(--color_background);
 }
 
 /* Media query para tablets */
 @media (min-width: 768px) {
     header {
         display: flex;
+        background: linear-gradient(to bottom, var(--color_background), var(--color_background), var(--color_background), var(--color_background), transparent);
+    }
+
+    .nav__links {
+        background-color: transparent;;
+    }
+
+    .empresa__container {
+        justify-content: flex-start;
+        margin-right: 7vw;
     }
 
     .nombre__empresa {
-        font-size: calc(var(--tamaño-N_empresa));
+        position: relative;
+        top: -9px
     }
 
     .bars__menu {
@@ -116,13 +189,45 @@ body {
         margin: 0;
         padding: 0;
         display: flex;
+        justify-content: flex-end;
         position: static;
         clip-path: none;
         flex-direction: row;
+        justify-content: space-around;
     }
 
     .nav__link {
-        margin-left: 2vw;
-        padding: 3%;
+        padding: 2.5%;
+    }
+
+    /* Animación del icono de la empresa */
+    .ico-svg:hover {
+        animation: salto 0.8s infinite
+    }
+
+    @keyframes salto {
+        0%, 100% {top:0;}
+        30% {top: calc(-0.25 * var(--tamaño_nombre_empresa));} 
+    }
+
+    .main {
+        background: none;
+    }
+}
+
+/* Escritorios normales */
+@media (min-width: 992px) {
+    body {
+        font-size: 16px;
+    }
+
+    .nombre__empresa {
+        font-size: calc(var(--tamaño_nombre_empresa));
+        width: 500px;
+        margin-left: 1vw;
+    }
+
+    .empresa__container {
+        width: auto;
     }
 }
