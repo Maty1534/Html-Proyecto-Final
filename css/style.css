@@ -60,6 +60,10 @@ header {
   align-items: center;
 }
 
+header a {
+  text-decoration: none;
+}
+
 /* Nombre de la empresa */
 .empresa__container {
   display: flex;
@@ -111,7 +115,7 @@ header {
 
 /* Estilos generales para mobiles */
 body {
-  font-size: 14px;
+  font-size: 17px;
   background: white;
 }
 
@@ -126,9 +130,9 @@ body {
 
 .gif1,
 .img_1 {
-  border-radius: 5%;
+  border-radius: 8px;
   margin-top: 1%;
-  width: 40%;
+  width: 80%;
 }
 
 .titulo {
@@ -139,6 +143,7 @@ body {
   text-align: center;
   box-shadow: var(--shadow-elevation-medium);
   background-color: var(--color_background);
+  border-radius: 8px;
 }
 
 section,
@@ -147,8 +152,9 @@ aside,
   background-color: var(--color_background);
   width: 100vw;
   margin: 2%;
-  padding: 0.5%;
+  padding: 2%;
   box-shadow: var(--shadow-elevation-medium);
+  border-radius: 8px;
 }
 
 section ol li,
@@ -164,7 +170,7 @@ aside ul li {
   display: flex;
   align-items: center;
   overflow: auto;
-  height: auto;
+  height: 25vh;
   margin: 2% 5% 5% 5%;
 }
 
@@ -183,6 +189,14 @@ p {
   align-items: center;
 }
 
+#Titulo_inicio {
+  margin: 0.5% 0 2% 0;
+}
+
+#img_inicio1 {
+  margin-bottom: 1%;
+}
+
 /* Artículos en cards */
 .card {
   display: flex;
@@ -198,6 +212,8 @@ p {
 }
 
 .card__image {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
   width: 100%;
   height: 50%;
   overflow: auto;
@@ -280,7 +296,7 @@ p {
 
   /* Cuerpo Principal */
   body {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .main {
