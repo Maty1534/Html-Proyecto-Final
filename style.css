@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+/* Fuente de texto: dos fuentes (Montserrat, Roboto) */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans&family=Roboto:wght@300&display=swap");
+
 :root {
   --color_primary: #5e9188;
   --color_secondary: #ffffff;
@@ -52,6 +55,7 @@
 
 /* Header principal */
 header {
+  font-family: "Montserrat", sans-serif;
   width: 100%;
   background-color: var(--color_background);
   padding: 5px 10px;
@@ -97,6 +101,7 @@ header a {
   clip-path: circle(0% at top right);
   transition: clip-path 0.4s;
   background-color: var(--color_background);
+  touch-action: pan-x;
 }
 
 .nav__link {
@@ -113,6 +118,11 @@ header a {
   color: var(--color_tertiary);
 }
 
+/* Estilos para el desplazamiento */
+.no-scroll {
+  overflow: hidden;
+}
+
 /* Estilos generales para mobiles */
 body {
   font-size: 17px;
@@ -120,6 +130,7 @@ body {
 }
 
 .main {
+  font-family: "Roboto", sans-serif;
   color: var(--color_secondary);
   display: flex;
   justify-content: center;
@@ -133,6 +144,13 @@ body {
   border-radius: 8px;
   margin-top: 1%;
   width: 80%;
+}
+
+section .gif1,
+section .img_1,
+aside .gif1,
+aside .img_1 {
+  width: 90%;
 }
 
 .titulo {
@@ -152,9 +170,17 @@ aside,
   background-color: var(--color_background);
   width: 100vw;
   margin: 2%;
-  padding: 2%;
+  padding: 1.5%;
   box-shadow: var(--shadow-elevation-medium);
   border-radius: 8px;
+  text-align: center;
+}
+
+section p,
+aside p,
+aside ul,
+section ol {
+  text-align: left;
 }
 
 section ol li,
@@ -180,7 +206,6 @@ h2 {
 
 p {
   margin: 2% 2%;
-  font-size: 17px;
 }
 
 #Inicio {
@@ -197,11 +222,28 @@ p {
   margin-bottom: 1%;
 }
 
+.link_IG {
+  display: flex;
+  text-decoration: none;
+  color: #00e676;
+  font-size: 50px;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.icon_ig {
+  color: rosybrown;
+  margin: 0 50%;
+}
+
 /* Artículos en cards */
 .card {
   display: flex;
   flex: 0 0 80%;
   flex-wrap: wrap;
+  min-width: 300px;
   max-width: 350px;
   margin: 5% 2.5%;
   border: 1px solid #ccc;
@@ -242,6 +284,11 @@ p {
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
+}
+
+/* Pie de pagina */
+footer {
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Media query para tablets */
@@ -352,17 +399,29 @@ p {
     display: flex;
     order: 1;
   }
+
+  .gif1,
+  .img_1 {
+    width: 47%;
+  }
+
+  section .gif1,
+  section .img_1,
+  aside .gif1,
+  aside .img_1 {
+    width: 80%;
+  }
 }
 
 /* Escritorios normales */
 @media (min-width: 992px) {
   body {
-    font-size: 16px;
+    font-size: 19px;
   }
 
   .nombre__empresa {
     font-size: calc(var(--tamaño_nombre_empresa));
-    width: 500px;
+    width: 524px;
     margin-left: 1vw;
   }
 
