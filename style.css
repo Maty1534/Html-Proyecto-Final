@@ -101,7 +101,6 @@ header a {
   clip-path: circle(0% at top right);
   transition: clip-path 0.4s;
   background-color: var(--color_background);
-  touch-action: pan-x;
 }
 
 .nav__link {
@@ -268,7 +267,6 @@ p {
 }
 
 .card__title {
-  height: 27%;
   text-align: left;
   color: var(--color_primary);
   font-size: 1.2rem;
@@ -278,17 +276,15 @@ p {
 .card__description {
   font-size: 1rem;
   color: #555;
-  height: 45%;
 }
 
 .card__button {
+  display: inline-block;
   padding: 8px 16px;
   background-color: #5e9188;
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
-  width: 111px;
-  display: flex;
 }
 
 .card:hover {
