@@ -243,7 +243,7 @@ p {
   display: flex;
   flex: 0 0 80%;
   flex-wrap: wrap;
-  min-width: 300px;
+  min-width: 325px;
   max-width: 350px;
   margin: 5% 2.5%;
   border: 1px solid #ccc;
@@ -251,6 +251,7 @@ p {
   box-shadow: var(--shadow-elevation-medium);
   width: 20%;
   height: 400px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .card__image {
@@ -262,10 +263,12 @@ p {
 }
 
 .card__content {
+  height: 50%;
   padding: 16px;
 }
 
 .card__title {
+  height: 27%;
   text-align: left;
   color: var(--color_primary);
   font-size: 1.2rem;
@@ -275,15 +278,21 @@ p {
 .card__description {
   font-size: 1rem;
   color: #555;
+  height: 45%;
 }
 
 .card__button {
-  display: inline-block;
   padding: 8px 16px;
   background-color: #5e9188;
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
+  width: 111px;
+  display: flex;
+}
+
+.card:hover {
+  transform: scale(1.1); /* Escalado del 10% al pasar el mouse */
 }
 
 /* Pie de pagina */
